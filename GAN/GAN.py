@@ -36,7 +36,7 @@ class Generator(nn.Module):
 class Discriminator(nn.Module):
     def __init__(self):
         super(Discriminator,self).__init__()
-        self.fc1=nn.Linear(int(np.prod((1,28,28))),512)
+        self.fc1=nn.Linear(int(np.prod(image_dimension)),512)
         self.fc2=nn.Linear(512, 256)
         self.fc3= nn.Linear(256, 1)
         self.sigmoid=nn.Sigmoid()
