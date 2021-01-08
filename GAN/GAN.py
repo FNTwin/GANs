@@ -120,4 +120,4 @@ gan=GAN(epochs=200,
         lr=0.0002,
         bs=(0.5,0.999))
 
-gan.train(load_mnist)
+gan.train(load_mnist())
