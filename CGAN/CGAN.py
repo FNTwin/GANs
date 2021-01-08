@@ -9,10 +9,7 @@ from torch.utils.data import DataLoader
 from torchvision import datasets
 from torch.autograd import Variable
 
-latent_dimension=100
 image_dimension=(1,28,28)
-lr=0.0002
-bs=(0.5,0.999)
 
 class Generator(nn.Module):
     def __init__(self, latent_dimension, labels):
@@ -125,4 +122,4 @@ cgan=CGAN(epochs=200,
           lr=0.0002,
           bs=(0.5,0.999))
 
-cgan.train(load_mnist)
+cgan.train(load_mnist())
