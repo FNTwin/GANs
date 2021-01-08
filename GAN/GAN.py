@@ -94,6 +94,7 @@ class GAN():
 		        )
 
 	def generate_images(self, n_images):
+		Tensor = torch.cuda.FloatTensor if device is "cuda" else torch.FloatTensor
 		z=Variable(Tensor(np.random.normal(0, 1, (n_images, self.latent_dim))))
 		fake_images=self.g(z.to(self.device))
 		return fake_images
